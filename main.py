@@ -7,7 +7,7 @@ import google.generativeai as genai  # ✅ FIXED: Correct import for Gemini
 
 # Load environment variable
 load_dotenv()
-GEMINI_API_KEY = "AIzaSyDiXGDknOkCmhxqFBiV_4mIJCOUjF7wLVM" # ✅ Safer than hardcoding
+GEMINI_API_KEY = "API_KEY" # ✅ Safer than hardcoding
 
 # Configure Gemini API
 genai.configure(api_key=GEMINI_API_KEY)
