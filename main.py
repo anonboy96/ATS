@@ -7,7 +7,7 @@ import google.generativeai as genai  # ✅ FIXED: Correct import for Gemini
 
 # Load environment variable
 load_dotenv()
-GEMINI_API_KEY = "API_KEY" # ✅ Safer than hardcoding
+GEMINI_API_KEY = "AIzaSyDiXGDknOkCmhxqFBiV_4mIJCOUjF7wLVM" # ✅ Safer than hardcoding
 
 # Configure Gemini API
 genai.configure(api_key=GEMINI_API_KEY)
@@ -119,3 +119,16 @@ if submitted and job_description and upload_file:
         ATS_Resume_Score_and_Suggestion(upload_file, job_description)
 elif submitted:
     st.warning("⚠️ Please make sure both Job Description and Resume are provided.")
+    # Footer with credit and Instagram link
+st.markdown("""
+    <hr style="margin-top: 3rem; margin-bottom: 1rem;">
+    <div style="text-align:center;">
+        <p style="color: #5f6368; font-size: 0.95rem;">
+            Made with ❤️ by <strong>Umang Patel</strong><br>
+            <a href="https://www.instagram.com/_umangggg__/" target="_blank" style="text-decoration: none; color: #4285F4;">
+                📸 Follow on Instagram
+            </a>
+        </p>
+    </div>
+""", unsafe_allow_html=True)
+
